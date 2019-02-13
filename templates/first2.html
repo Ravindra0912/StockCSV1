@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Dashboard</title>
+  <title>STOCKS</title>
 
   <!-- Custom fonts for this template-->
   <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -29,11 +29,11 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
         <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
+<!--          <i class="fas fa-laugh-wink"></i>  -->
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</div>
+        <div class="sidebar-brand-text mx-3">STOCKS</div>
       </a>
 
       <!-- Divider -->
@@ -41,7 +41,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="/">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -111,21 +111,62 @@
           </div>
 
 	<link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-    {% set count = namespace(a=0) %}
+    {% set count2 = namespace(a=0) %}
+    {% set count = namespace(i=0)%}
     {% for elem in full %}
-        <button class="collapsible"><h4>Reason for selecting Stock {{st[count.a ]}} is because of the following Attributes</h4></button>
-          <div class="content">
-          {% set count.a = count.a + 1 %}
+        <button class="collapsible"><h4>Reason for selecting Stock {{st[count2.a ]}} is because of the following Attributes</h4></button>
+          <div class="content" style="padding-bottom:5%;">
+              <div>
+          {% set count2.a = count2.a + 1 %}
         <table class="table" cellpadding="10">
             <thead><td>Attribute</td><td>Value</td></thead>
             {% for a in elem %}
-            <tr>  <td>{{a[0]}}</td><td>{{a[1]}}</td></tr>
+            <tr><td>{{a[0]}}</td><td>{{a[1]}}</td></tr>
             {% endfor%}
-
+            <tr><td>Date</td><td>NA</td></tr>
+            <tr><td>Close price</td><td>NA</td></tr>
+            <tr><td>percentage price change over last 20 days</td><td>NA</td></tr>
+            <tr><td>Mean Price Over last 20 days</td><td>NA</td></tr>
+            <tr><td>Volatality of price</td><td>NA</td></tr>
+            <tr><td>Forecasted Price</td><td>NA</td></tr>
+            <tr><td>Date</td><td>NA</td></tr>
         </table>
+                  <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-sm-6">
+                  <button class="collapsible"><h6>Profitability & Management Effectiveness Rating</h6></button>
+                              {% set elem3 = full3[count.i] %}
+                  <div class="content">
+                      <table class="table">
+                          <thead><td>Attribute</td><td>value</td>
+                          {%for a3 in elem3 %}
+                          <tr><td>{{a3[0]}}</td><td>{{a3[1]}}</td></tr>
+                          {%endfor%}
+
+                      </table>
+                  </div>
+
+                          </div>
+                          <div class="col-sm-6">
+                  <button class="collapsible"><h6>Revenue Generator and Liquidity Rating</h6></button>
+
+
+                              <div class="content">
+                      <table class="table">
+                          {% set elem4 = full4[count.i]%}
+                          <thead><td>Attribute</td><td>value</td>
+                          {%for a4 in elem4%}
+                          <tr><td>{{a4[0]}}</td><td>{{a4[1]}}</td></tr>
+                          {%endfor%}
+                      </table>
+                  </div>
+                   {% set count.i = count.i+1 %}
+                          </div>
+                          </div>
+              </div>
+              </div>
           </div>
     {% endfor %}
-
     </div>
           </div>
       <!-- End of Main Content -->
@@ -150,7 +191,7 @@
   </a>
 
   <!-- Logout Modal-->
-
+    </div>
 
   <!-- Bootstrap core JavaScript-->
   <script src="/static/vendor/jquery/jquery.min.js"></script>
