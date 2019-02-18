@@ -122,11 +122,12 @@
             {% for a in elem %}
             <tr><td>{{a[0]}}</td><td style="padding-top:2%;">{{a[3]}}</td><td class="checked">{{a[1]}}{{a[2]}}</td></tr>
             {% endfor%}
-            <tr><td>percentage price change over last 20 days</td><td>NA</td></tr>
-            <tr><td>Mean Price Over last 20 days</td><td>NA</td></tr>
-            <tr><td>Volatality of price</td><td>NA</td></tr>
-            <tr><td>Forecasted Price</td><td>NA</td></tr>
-            <tr><td>Date</td><td>NA</td></tr>
+            <tr><td>percentage price change over last 20 days</td><td>NA</td><td>NA</td></tr>
+            <tr><td>Mean Price Over last 20 days</td><td>NA</td><td>NA</td></tr>
+            <tr><td>Volatality of price</td><td>NA</td><td>NA</td></tr>
+            <tr><td>Close</td><td>NA</td><td>NA</td></tr>
+            <tr><td>Forecasted Price</td><td>NA</td><td>NA</td></tr>
+            <tr><td>Date</td><td>NA</td><td>NA</td></tr>
         </table>
                   <div class="container-fluid">
                       <div class="row">
@@ -136,7 +137,12 @@
                   <div class="content">
                       <table class="table">
                           {%for a3 in elem3 %}
+                          {% if a3[3] > 5 %}
                           <tr><td>{{a3[0]}}</td><td>{{a3[3]}}</td><td class="checked1">{{a3[1]}}{{a3[2]}}</td></tr>
+                          {% endif %}
+                          {% if a3[3] <= 5 %}
+                          <tr><td>{{a3[0]}}</td><td>{{a3[3]}}</td><td class="checked2">{{a3[1]}}{{a3[2]}}</td></tr>
+                          {% endif %}
                           {%endfor%}
 
                       </table>
@@ -148,7 +154,12 @@
                       <table class="table">
                           {% set elem4 = full4[count.i]%}
                           {%for a4 in elem4%}
+                          {% if a4[3] > 5 %}
                           <tr><td>{{a4[0]}}</td><td>{{a4[3]}}</td><td class="checked1">{{a4[1]}}{{a4[2]}}</td></tr>
+                          {% endif %}
+                          {% if a4[3] <= 5 %}
+                          <tr><td>{{a4[0]}}</td><td>{{a4[3]}}</td><td class="checked2">{{a4[1]}}{{a4[2]}}</td></tr>
+                          {% endif %}
                           {%endfor%}
                       </table>
                   </div>
