@@ -29,13 +29,17 @@ background-image=""
 
 .checked {
   color: #32CD32;
-  font-size:22px;
+  font-size:21px;
 }
 .checked1 {
   color: #32CD32;
-  font-size:16px;
+  font-size:19px;
 }
 .checked2 {
+  color: #f2b01e;
+  font-size:19px;
+}
+.checked3 {
   color: red;
-  font-size:16px;
+  font-size:19px;
 }

@@ -137,11 +137,14 @@
                   <div class="content">
                       <table class="table">
                           {%for a3 in elem3 %}
-                          {% if a3[3] > 5 %}
-                          <tr><td>{{a3[0]}}</td><td>{{a3[3]}}</td><td class="checked1">{{a3[1]}}{{a3[2]}}</td></tr>
+                          {% if a3[3] > 6 %}
+                          <tr><td>{{a3[0]}}</td><td width="10%">{{a3[3]}}</td><td class="checked1" width="60%">{{a3[1]}}{{a3[2]}}</td></tr>
                           {% endif %}
-                          {% if a3[3] <= 5 %}
-                          <tr><td>{{a3[0]}}</td><td>{{a3[3]}}</td><td class="checked2">{{a3[1]}}{{a3[2]}}</td></tr>
+                          {% if a3[3] == 6 or a3[3] == 5%}
+                          <tr><td>{{a3[0]}}</td><td width="10%">{{a3[3]}}</td><td class="checked2" width="60%">{{a3[1]}}{{a3[2]}}</td></tr>
+                          {% endif %}
+                          {% if a3[3] < 5 %}
+                          <tr><td>{{a3[0]}}</td><td width="10%">{{a3[3]}}</td><td class="checked3" width="60%">{{a3[1]}}{{a3[2]}}</td></tr>
                           {% endif %}
                           {%endfor%}
 
@@ -154,11 +157,14 @@
                       <table class="table">
                           {% set elem4 = full4[count.i]%}
                           {%for a4 in elem4%}
-                          {% if a4[3] > 5 %}
-                          <tr><td>{{a4[0]}}</td><td>{{a4[3]}}</td><td class="checked1">{{a4[1]}}{{a4[2]}}</td></tr>
+                          {% if a4[3] > 6 %}
+                          <tr><td>{{a4[0]}}</td><td width="10%">{{a4[3]}}</td><td class="checked1" width="60%">{{a4[1]}}{{a4[2]}}</td></tr>
                           {% endif %}
-                          {% if a4[3] <= 5 %}
-                          <tr><td>{{a4[0]}}</td><td>{{a4[3]}}</td><td class="checked2">{{a4[1]}}{{a4[2]}}</td></tr>
+                          {% if a4[3] == 6 or a4[3] == 5%}
+                          <tr><td>{{a4[0]}}</td><td width="10%">{{a4[3]}}</td><td class="checked2" width="60%">{{a4[1]}}{{a4[2]}}</td></tr>
+                          {% endif %}
+                          {% if a4[3] < 5 %}
+                          <tr><td>{{a4[0]}}</td><td width="10%">{{a4[3]}}</td><td class="checked3" width="60%">{{a4[1]}}{{a4[2]}}</td></tr>
                           {% endif %}
                           {%endfor%}
                       </table>
