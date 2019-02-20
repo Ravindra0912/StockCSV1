@@ -4,9 +4,9 @@ import os
 
 app = Flask(__name__)
 
-# function to get all the attributes for each stock in a file.
 
 def get_close(filename):
+
 
     df = pd.read_csv("STOCK CSV FILES/"+filename)
     attribute_list = list(df)
@@ -119,23 +119,23 @@ def revenue(filename):
         date = value_list[-2:]
         value_list = value_list[1:51]
         i = 0
-        if attribute_list[33].find("(")!= -1:
+        if attribute_list[33].find("(") != -1:
             reqd_attributes.append([attribute_list[33][:attribute_list[33].find("(")],"★ "*int(float(value_list[33])),"☆ "*(10 - int(float(value_list[33]))),int(float(value_list[33]))])
         else:
             reqd_attributes.append([attribute_list[33],"★ "*int(float(value_list[33])),"☆ "*(10 - int(float(value_list[33]))),int(float(value_list[33]))])
-        if attribute_list[34].find("(")!= -1:
+        if attribute_list[34].find("(") != -1:
             reqd_attributes.append([attribute_list[34][:attribute_list[34].find("(")],"★ "*int(float(value_list[34])),"☆ "*(10 - int(float(value_list[34]))),int(float(value_list[34]))])
         else:
             reqd_attributes.append([attribute_list[34],"★ "*int(float(value_list[34])),"☆ "*(10 - int(float(value_list[34]))),int(float(value_list[34]))])
-        if attribute_list[35].find("(")!= -1:
+        if attribute_list[35].find("(") != -1:
             reqd_attributes.append([attribute_list[35][:attribute_list[35].find("(")],"★ "*int(float(value_list[35])),"☆ "*(10 - int(float(value_list[35]))),int(float(value_list[35]))])
         else:
             reqd_attributes.append([attribute_list[35],"★ "*int(float(value_list[35])),"☆ "*(10 - int(float(value_list[35]))),int(float(value_list[35]))])
-        if attribute_list[36].find("(")!= -1:
+        if attribute_list[36].find("(") != -1:
             reqd_attributes.append([attribute_list[36][:attribute_list[36].find("(")],"★ "*int(float(value_list[36])),"☆ "*(10 - int(float(value_list[36]))),int(float(value_list[36]))])
         else:
             reqd_attributes.append([attribute_list[36],"★ "*int(float(value_list[36])),"☆ "*(10 - int(float(value_list[36]))),int(float(value_list[36]))])
-        if attribute_list[28].find("(")!= -1:
+        if attribute_list[28].find("(") != -1:
             reqd_attributes.append([attribute_list[28][:attribute_list[28].find("(")],"★ "*int(float(value_list[28])),"☆ "*(10 - int(float(value_list[28]))),int(float(value_list[28]))])
         else:
             reqd_attributes.append([attribute_list[28],"★ "*int(float(value_list[28])),"☆ "*(10 - int(float(value_list[28]))),int(float(value_list[28]))])
