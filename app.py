@@ -170,7 +170,7 @@ def get_file_name(filename):
 
 @app.route('/')
 def index():
-    return render_template('index2.html')
+    return render_template('index.html')
 
 
 @app.route('/<filename>')
