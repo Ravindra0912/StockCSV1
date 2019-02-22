@@ -25,7 +25,8 @@ def get_close(filename):
 
 
 def filter(filename):
-
+    # Stock Growth Rating
+    # Financial Health Rating
     df = pd.read_csv("STOCK CSV FILES/"+filename)
     attribute_list = list(df)
     attribute_list = attribute_list[1:52]
@@ -169,7 +170,7 @@ def get_file_name(filename):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index2.html')
 
 
 @app.route('/<filename>')
