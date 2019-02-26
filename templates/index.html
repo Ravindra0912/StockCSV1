@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>STOCKS</title>
+  <title>Aussie Stock Trader</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='Aussie16.ico') }}">
+
   <!-- Custom fonts for this template-->
   <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -23,7 +25,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
 <!--          <i class="fas fa-laugh-wink"></i>  -->
         </div>
-        <div class="sidebar-brand-text mx-3">STOCKS</div>
+        <div class="sidebar-brand-text mx-3">Aussie Stock Trader</div>
       </a>
 
       <!-- Divider -->
@@ -110,11 +112,6 @@
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary"><a href="https://www.youtube.com/watch?v=F3QpgXBtDeo">How The Stock Exchange Works (Video)</a></h6>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                    </a>
-                  </div>
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
@@ -138,18 +135,6 @@
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">Brief Overview Of Each Sector</h6>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                      <div class="dropdown-header">Dropdown Header:</div>
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
@@ -161,6 +146,96 @@
                     <button class="collapsible"><h8>Consumer Staples </h8></button>
           <div class="content" style="padding-bottom:5%;">
 Consumer staples are essential products, such as food, beverages, tobacco and household items. Consumer staples are goods that people are unable or unwilling to cut out of their budgets regardless of their financial situation.
+          </div>
+                    &nbsp
+                    <button class="collapsible"><h8>Energy </h8></button>
+          <div class="content" style="padding-bottom:5%;">
+The Energy Sector (comprises companies whose businesses are dominated by either of the following
+activities: the construction or provision of oil rigs, drilling equipment and other energy related service
+and equipment, including seismic data collection; or, companies engaged in the exploration,
+production, marketing, refining and/or transportation of oil and gas products, coal and other
+consumable fuels.
+          </div>
+                    &nbsp
+                    <button class="collapsible"><h8>Finance </h8></button>
+          <div class="content" style="padding-bottom:5%;">
+The Finance Sector contains companies involved in activities such as banking, mortgage finance,
+consumer finance, specialised finance, investment banking and brokerage, asset management and
+custody, corporate lending, insurance, and financial investment, and real estate, including REITs.
+          </div>
+                    &nbsp
+                    <button class="collapsible"><h8>Healthcare</h8></button>
+          <div class="content" style="padding-bottom:5%;">
+The Healthcare Sector encompasses two main industry groups. The first includes companies who
+manufacture health care equipment and supplies or provide health care related services, and owners
+and operators of health care products, providers of basic health-care services, and owners and
+operators of health care facilities and organisations. The second group includes companies primarily
+involved in the research, development, production and marketing of pharmaceuticals and
+biotechnology products.
+          </div>
+                       &nbsp
+                    <button class="collapsible"><h8>Industrial</h8></button>
+          <div class="content" style="padding-bottom:5%;">
+The Industrial Sector includes companies whose businesses are dominated by one of the following
+activities: the manufacture and distribution of capital goods, including aerospace &amp; defense,
+construction, engineering &amp; building products, electrical equipment and industrial machinery; or, the
+provision of commercial services and supplies, including printing, employment, environmental and
+office services; or, the provision of transportation services, including airlines, couriers, marine, road &amp;
+rail and transportation infrastructure.
+          </div>
+                                          &nbsp
+                    <button class="collapsible"><h8>Information Technology</h8></button>
+          <div class="content" style="padding-bottom:5%;">
+              The Information Technology Sector covers the following general areas: firstly, Software &amp; Services,
+including companies that primarily develop software in various fields such as the Internet,
+applications, systems, databases management and/or home entertainment, and companies that
+provide information technology consulting and services, as well as data processing and outsourced
+services; secondly, Technology Hardware &amp; Equipment, including manufacturers and distributors of
+communications equipment, computers &amp; peripherals, electronic equipment and related instruments;
+and thirdly, Semiconductors &amp; Semiconductor Equipment Manufacturers.
+          </div>
+                    &nbsp
+                    <button class="collapsible"><h8>Large Cap</h8></button>
+          <div class="content" style="padding-bottom:5%;">
+  These are the biggest companies on the ASX in terms of market cap. The S&amp;P/ASX 50 is comprised
+of the 50 largest companies, representing over half of the Australian share market by market cap. The
+market cap of these securities generally ranges between tens of billions to over $100 billion.
+          </div>
+                    &nbsp
+                    <button class="collapsible"><h8>Material</h8></button>
+          <div class="content" style="padding-bottom:5%;">
+  The Material Sector encompasses a wide range of commodity-related manufacturing industries.
+Included in this sector are companies that manufacture chemicals, construction materials, glass,
+paper, forest products and related packaging products, and metals, minerals and mining companies,
+including producers of steel.
+          </div>
+                    &nbsp
+                    <button class="collapsible"><h8>Medium Cap</h8></button>
+          <div class="content" style="padding-bottom:5%;">
+These are the next 50 biggest companies on the ASX in terms of market cap. The S&amp;P/ASX MidCap
+50 is comprised of the members of the S&amp;P/ASX 100, excluding those in the S&amp;P/ASX 50. The
+market cap of these securities generally ranges between tens $2 billion to $10 billion.
+          </div>
+                    &nbsp
+                    <button class="collapsible"><h8>Small Cap</h8></button>
+          <div class="content" style="padding-bottom:5%;">
+These are all those companies that sit outside of the largest 100 on the ASX by market cap. The
+S&amp;P/ASX Small Ordinaries index represents those smaller members of the S&amp;P/ASX300 index. It’s
+used as a benchmark for small cap Australian shares. Companies in this index generally have a
+market cap of a few hundred million to 2 billion.
+          </div>
+                    &nbsp
+                    <button class="collapsible"><h8>Telecommunication</h8></button>
+          <div class="content" style="padding-bottom:5%;">
+The Telecommunication Sector provides investors with a sector benchmark that reflects those
+companies included in the S&amp;P/ASX 200 that are classified as members of the GICS®
+communication services sector and sub-industries.
+          </div>
+                    &nbsp
+                    <button class="collapsible"><h8>Utilities</h8></button>
+          <div class="content" style="padding-bottom:5%;">
+The Utilities Sector encompasses those companies considered to be electric, gas or water utilities, or
+companies that operate as independent producers and/or distributors of power.
           </div>
                 </div>
                   <div class="chart-pie pt-4 pb-2">

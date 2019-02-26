@@ -176,7 +176,7 @@ def index():
 @app.route('/<filename>')
 def file(filename):
     filename = get_file_name(filename)
-    industry_names = {'ConsDis':'Consumer Discretionary','ConsStap':'Consumer Staples','IT':'Information Technology','LargeCap':'Large Cap','MediumCap':'Medium Cap','SmallCap':'Small Cap','Tele':'Tele-communication'}
+    industry_names = {'ConsDis':'Consumer Discretionary','ConsStap':'Consumer Staples','IT':'Information Technology','LargeCap':'Large Cap','MediumCap':'Medium Cap','SmallCap':'Small Cap','Tele':'Telecommunication'}
     full_list1,date = filter(filename)
     stock_names=[]
     f = filename.split('_')
