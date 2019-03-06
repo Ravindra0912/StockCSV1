@@ -110,6 +110,7 @@
 	<link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     {% set count2 = namespace(a=0) %}
     {% set count = namespace(i=0)%}
+    {%set count3 = namespace(j=0)%}
     {% for elem in full %}
         <button class="collapsible"><h4>Overall Stock Ratings for Stock : {{st[count2.a ]}} </h4></button>
           <div class="content" style="padding-bottom:5%;">
@@ -119,12 +120,10 @@
             {% for a in elem %}
             <tr><td>{{a[0]}}</td><td style="padding-top:2%;">{{a[3]}}</td><td class="checked">{{a[1]}}{{a[2]}}</td></tr>
             {% endfor%}
-            <tr><td>percentage price change over last 20 days</td><td>NA</td><td>NA</td></tr>
-            <tr><td>Mean Price Over last 20 days</td><td>NA</td><td>NA</td></tr>
-            <tr><td>Volatality of price</td><td>NA</td><td>NA</td></tr>
-            <tr><td>Close</td><td>NA</td><td>NA</td></tr>
-            <tr><td>Forecasted Price</td><td>NA</td><td>NA</td></tr>
-            <tr><td>Date</td><td>NA</td><td>NA</td></tr>
+            {%set fl = flnew[count3.j] %}
+            {% for fln in fl %}
+                <tr><td>{{fln[0]}}</td><td>{{fln[1]}}</td><td>{{" "}}</td></tr>
+            {% endfor %}
         </table>
                   <div class="container-fluid">
                       <div class="row">
@@ -167,6 +166,7 @@
                       </table>
                   </div>
                    {% set count.i = count.i+1 %}
+                              {% set count3.j = count3.j+1 %}
                    </div>
                 </div>
               </div>
