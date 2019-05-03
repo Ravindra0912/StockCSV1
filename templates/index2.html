@@ -99,97 +99,22 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-          <!-- Image Area/Result Area-->
-        <link href="/static/col.css" rel="stylesheet" type="text/css">
 
       <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">{{fn}}</h1>
-        <span class="h6 mb-0 text-gray-800">Start Date : {{d[0]}}<br>End &nbsp;Date : {{d[1]}}</span>
-          </div>
-
-	<link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-    {% set count2 = namespace(a=0) %}
-    {% set count = namespace(i=0)%}
-    {%set count3 = namespace(j=0)%}
-    {% for elem in full %}
-        <button class="collapsible"><h4> {{st[count2.a ]}} </h4></button>
-          <div class="content" style="padding-bottom:5%;">
-              <div>
-          {% set count2.a = count2.a + 1 %}
-                  <h4 style="padding-top:10px; padding-bottom:10px;"> Overall Stock Ratings</h4>
-        <table class="table" cellpadding="10">
-            {% for a in elem %}
-            <tr><td class="text-gray-800">{{a[0]}}</td><td style="padding-top:2%;" class="text-gray-800" >{{a[3]}}</td><td class="checked">{{a[1]}}{{a[2]}}</td></tr>
-            {% endfor%}
-            {%set fl = flnew[count3.j] %}
-            {% for fln in fl %}
-                <tr><td class="text-gray-800">{{fln[0]}}</td><td class="text-gray-800" >{{fln[1]}}</td><td>{{" "}}</td></tr>
-            {% endfor %}
-        </table>
-                  <div class="container-fluid">
-                      <div class="row">
-                          <div class="col-sm-6">
-                  <button class="collapsible"><h6>Profitability & Management Effectiveness Rating</h6></button>
-                              {% set elem3 = full3[count.i] %}
-                  <div class="content">
-                      <table class="table">
-                          {%for a3 in elem3 %}
-                          {% if a3[3] > 6 %}
-                          <tr><td class="text-gray-800">{{a3[0]}}</td><td width="10%" class="text-gray-800">{{a3[3]}}</td><td class="checked1" width="60%">{{a3[1]}}{{a3[2]}}</td></tr>
-                          {% endif %}
-                          {% if a3[3] == 6 or a3[3] == 5%}
-                          <tr><td class="text-gray-800">{{a3[0]}}</td><td width="10%" class="text-gray-800">{{a3[3]}}</td><td class="checked2" width="60%">{{a3[1]}}{{a3[2]}}</td></tr>
-                          {% endif %}
-                          {% if a3[3] < 5 %}
-                          <tr><td class="text-gray-800">{{a3[0]}}</td><td width="10%" class="text-gray-800">{{a3[3]}}</td><td class="checked3" width="60%">{{a3[1]}}{{a3[2]}}</td></tr>
-                          {% endif %}
-                          {%endfor%}
-
-                      </table>
-                  </div>
-                          </div>
-                          <div class="col-sm-6">
-                  <button class="collapsible"><h6>Revenue Generator and Liquidity Rating</h6></button>
-                              <div class="content">
-                      <table class="table">
-                          {% set elem4 = full4[count.i]%}
-                          {%for a4 in elem4%}
-                          {% if a4[3] > 6 %}
-                          <tr><td class="text-gray-800">{{a4[0]}}</td><td width="10%" class="text-gray-800">{{a4[3]}}</td><td class="checked1" width="60%">{{a4[1]}}{{a4[2]}}</td></tr>
-                          {% endif %}
-                          {% if a4[3] == 6 or a4[3] == 5%}
-                          <tr><td class="text-gray-800">{{a4[0]}}</td><td width="10%" class="text-gray-800">{{a4[3]}}</td><td class="checked2" width="60%">{{a4[1]}}{{a4[2]}}</td></tr>
-                          {% endif %}
-                          {% if a4[3] < 5 %}
-                          <tr><td class="text-gray-800">{{a4[0]}}</td><td width="10%" class="text-gray-800">{{a4[3]}}</td><td class="checked3" width="60%">{{a4[1]}}{{a4[2]}}</td></tr>
-                          {% endif %}
-                          {%endfor%}
-                      </table>
-                  </div>
-                   {% set count.i = count.i+1 %}
-                              {% set count3.j = count3.j+1 %}
-                   </div>
-                </div>
-              </div>
-              </div>
-          </div>
-    {% endfor %}
-
+          {%if flag==1 %}
+            <h1 class="h3 mb-0 text-gray-800">The file for {{sec}} sector does not exist</h1>
+          {%endif%}
+          {%if flag==2%}
+            <h1 class="h3 mb-0 text-gray-800">{{excep}} </h1>
+          {%endif%}
+          <!-- Image Area/Result Area-->
+        <link href="/static/col.css" rel="stylesheet" type="text/css">
     </div>
           </div>
       <!-- End of Main Content -->
 
       <!-- Footer -->
         <footer class="sticky-footer">
- <div style="padding-top:5% padding-bottom:2%;">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-4">1-4 <span class="checked3">★</span> : Poor</div>
-                        <div class="col-sm-4">5-6 <span class="checked2">★</span> : Average</div>
-                        <div class="col-sm-4">More Than 6 <span class="checked1">★</span> : Good<br></div>
-                    </div>
-                    </div>
-                </div>
         </footer>
       <!-- End of Footer -->
     <!-- End of Content Wrapper -->
