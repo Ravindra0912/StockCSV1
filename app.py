@@ -73,7 +73,6 @@ def filter(filename):
                 reqd_attributes.append([attribute_list[i],"★ "*int(float(value_list[i])), "☆ "*(10-int(float(value_list[i]))),int(float(value_list[i]))])
         reqd_attributes = [current_stock] + reqd_attributes
         full_list = full_list + [reqd_attributes]
-    print("full list ",full_list)
     return full_list,date
 
 def profit(filename):
@@ -131,7 +130,6 @@ def profit(filename):
                     reqd_attributes.append([attribute_list[i],"★ "*int(float(value_list[i])),"☆ "*(10-int(float(value_list[i]))),int(float(value_list[i]))])
         reqd_attributes = [current_stock] + reqd_attributes
         full_list = full_list + [reqd_attributes]
-    print("PROFIT",full_list)
     for elem in full_list:
             elem.pop(0)
     return full_list
@@ -205,7 +203,6 @@ def revenue(filename):
                     reqd_attributes.append([attribute_list[i],"★ "*int(float(value_list[i])),"☆ "*(10-int(float(value_list[i]))),int(float(value_list[i]))])
         reqd_attributes = [current_stock] + reqd_attributes
         full_list = full_list + [reqd_attributes]
-    print("revenue",full_list)
     for elem in full_list:
             elem.pop(0)
     return full_list
